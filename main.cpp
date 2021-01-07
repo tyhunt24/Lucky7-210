@@ -9,7 +9,7 @@ using namespace std;
 //void program2();
 //void program3();
 //void program4();
-void program5();
+//void program5();
 //void program6();
 //void program7();
 
@@ -19,7 +19,7 @@ int main() {
 //    program2();
 //    program3();
 //    program4();
-    program5();
+//    program5();
     return 0;
 }
 
@@ -105,6 +105,31 @@ void program4() {
 }
 
 void program5() {
+    int n;
+    bool isPrime = true;
+
+    cout << "Enter a positive whole number: ";
+    cin >> n;
+
+    if(n == 0 | n == 1) {
+        isPrime = false;
+    } else  {
+        for(int i = 2; i <= n/2; i++) {
+            if(n % i == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+    }
+
+    if(isPrime) {
+        cout << n << " is a prime number" << endl;
+    } else {
+        cout << n << " is not a prime number" << endl;
+    }
+}
+
+void program6() {
     
 }
 
