@@ -1,17 +1,19 @@
 //Jeffrey Hunt
 //1-7-21
-//This is all my own work
+//This is all my own work with
+// I have used stack overflow for program 4, program 5
 
 #include <iostream>
+#include <vector>
 using namespace std;
 
-//void program1();
-//void program2();
-//void program3();
-//void program4();
-//void program5();
-//void program6();
-//void program7();
+void program1();
+void program2();
+void program3();
+void program4();
+void program5();
+void program6();
+void program7();
 
 int main() {
 
@@ -20,6 +22,8 @@ int main() {
 //    program3();
 //    program4();
 //    program5();
+//    program6();
+    program7();
     return 0;
 }
 
@@ -111,7 +115,7 @@ void program5() {
     cout << "Enter a positive whole number: ";
     cin >> n;
 
-    if(n == 0 | n == 1) {
+    if(n == 0 || n == 1) {
         isPrime = false;
     } else  {
         for(int i = 2; i <= n/2; i++) {
@@ -130,6 +134,20 @@ void program5() {
 }
 
 void program6() {
-    
+    vector<int> nums = {22, 21, 22, 24, 26, 74, 82, 91, 99, 65};
+
+    int sum;
+    int answer;
+
+    for(int i =0; i < nums.size(); i++) {
+        sum += nums[i];
+    }
+
+    answer = sum / nums.size();
+    cout << "The average is: " << answer << endl;
+
 }
 
+void program7() {
+
+}
