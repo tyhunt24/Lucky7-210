@@ -5,6 +5,8 @@
 
 #include <iostream>
 #include <vector>
+#include <fstream>
+#include  <string>
 using namespace std;
 
 void program1();
@@ -14,6 +16,7 @@ void program4();
 void program5();
 void program6();
 void program7();
+void findFileProgram7();
 
 int main() {
 
@@ -149,5 +152,28 @@ void program6() {
 }
 
 void program7() {
+    int n;
+    int longestWord;
+    string word;
 
+    cout << "Enter a positive Number: ";
+    cin >> n;
+
+    ifstream file("program7.txt");
+    if(file.is_open())
+    {
+        string myArray[n];
+
+        for(int i = 0; i < n; ++i)
+        {
+            file >> myArray[i];
+        }
+
+        longestWord = myArray[2].size();
+        word = myArray[0];
+
+        cout << longestWord << endl;
+
+    }
 }
+
