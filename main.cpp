@@ -25,8 +25,8 @@ int main() {
 //    program3();
 //    program4();
 //    program5();
-//    program6();
-    program7();
+    program6();
+//    program7();
     return 0;
 }
 
@@ -89,9 +89,9 @@ void program3() {
     int sum = 1;
     for (int i = 1; i <=10; i++) {
         sum = sum * i;
+        cout << sum << " " << endl;
 
     }
-    cout << sum;
 }
 
 void program4() {
@@ -112,7 +112,7 @@ void program4() {
 }
 
 void program5() {
-    int n;
+    long n;
     bool isPrime = true;
 
     cout << "Enter a positive whole number: ";
@@ -137,10 +137,10 @@ void program5() {
 }
 
 void program6() {
-    vector<int> nums = {22, 21, 22, 24, 26, 74, 82, 91, 99, 65};
+    vector<int> nums = {22, 21, 22, 24, 26, 74, 82, 91, 98, 65};
 
     int sum;
-    int answer;
+    double answer;
 
     for(int i =0; i < nums.size(); i++) {
         sum += nums[i];
@@ -153,8 +153,6 @@ void program6() {
 
 void program7() {
     int n;
-    int longestWord;
-    string word;
 
     cout << "Enter a positive Number: ";
     cin >> n;
@@ -167,13 +165,9 @@ void program7() {
         for(int i = 0; i < n; ++i)
         {
             file >> myArray[i];
+
+            cout << myArray[i] << endl;
         }
-
-        longestWord = myArray[2].size();
-        word = myArray[0];
-
-        cout << longestWord << endl;
-
     }
 }
 
