@@ -25,8 +25,8 @@ int main() {
 //    program3();
 //    program4();
 //    program5();
-    program6();
-//    program7();
+//    program6();
+    program7();
     return 0;
 }
 
@@ -157,17 +157,26 @@ void program7() {
     cout << "Enter a positive Number: ";
     cin >> n;
 
+    string* myArray;
+    myArray = new string[n];
+
     ifstream file("program7.txt");
     if(file.is_open())
     {
-        string myArray[n];
-
+        int longest = 0;
+        int longestPosition;
         for(int i = 0; i < n; ++i)
         {
             file >> myArray[i];
 
-            cout << myArray[i] << endl;
+            if(longest < myArray[i].length()) {
+                longest = myArray[i].length();
+                longestPosition = i;
+
+            }
         }
+
+        cout << myArray[longestPosition] << endl;
     }
 }
 
