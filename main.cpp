@@ -81,7 +81,9 @@ void program2() {
     // iterate through the first 50 numbers
     for(int i =1; i <= 50; i++) {
         // multiply and add each one
-        sum = sum + i * 7;
+       if (i % 7==0) {
+           sum += i;
+       }
     }
 
     //print out the result
