@@ -18,7 +18,7 @@ void program6();
 void program7();
 
 int main() {
-        program1();
+//        program1();
 //        program2();
 //        program3();
 //        program4();
@@ -96,12 +96,13 @@ void program3() {
     for (int i = 1; i <=10; i++) {
         sum = sum * i;
         //print out the sum of each number
-        cout << sum << " " << endl;
+        cout << sum << " ";
 
     }
 }
 
 void program4() {
+
     //declare the variables
     string normalWord;
     string reversedWord;
