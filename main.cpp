@@ -24,7 +24,7 @@ int main() {
 //        program4();
 //        program5();
 //        program6();
-//        program7();
+        program7();
     return 0;
 }
 
