@@ -1,7 +1,7 @@
 //Jeffrey Hunt
 //1-7-21
 //This is all my own work with
-// I have used stack overflow for program 4, program 5
+// I had help from the internet on program 5 and got help from the sub on program 7
 
 #include <iostream>
 #include <vector>
@@ -16,17 +16,15 @@ void program4();
 void program5();
 void program6();
 void program7();
-void findFileProgram7();
 
 int main() {
-
-//    program1();
-//    program2();
-//    program3();
-//    program4();
-//    program5();
-//    program6();
-    program7();
+        program1();
+//        program2();
+//        program3();
+//        program4();
+//        program5();
+//        program6();
+//        program7();
     return 0;
 }
 
@@ -76,34 +74,48 @@ void program1() {
 }
 
 void program2() {
+
+    //declare variable
     int sum = 0;
+
+    // iterate through the first 50 numbers
     for(int i =1; i <= 50; i++) {
+        // multiply and add each one
         sum = sum + i * 7;
     }
 
+    //print out the result
     cout << sum;
 
 }
 
 void program3() {
+    //place the variable
     int sum = 1;
+    //iterate through the first 10 numbers
     for (int i = 1; i <=10; i++) {
         sum = sum * i;
+        //print out the sum of each number
         cout << sum << " " << endl;
 
     }
 }
 
 void program4() {
+    //declare the variables
     string normalWord;
     string reversedWord;
+
+    //ask the user for input
     cout << "Enter in a word: ";
     cin >> normalWord;
 
+    //iterate through the word and reverse the word
     for (int i=normalWord.length()-1; i>=0; i--) {
         reversedWord += normalWord[i];
     }
 
+    //checks to see if the two words are palindrome
     if (reversedWord == normalWord) {
         cout << "is palindrome";
     } else {
@@ -112,16 +124,22 @@ void program4() {
 }
 
 void program5() {
+    //declare the variables
     long n;
     bool isPrime = true;
 
+    //ask the user for input
     cout << "Enter a positive whole number: ";
     cin >> n;
 
+    //check to see if the number is 0 or 1 and declare it prime
     if(n == 0 || n == 1) {
         isPrime = false;
     } else  {
+        //iterate through the number
         for(int i = 2; i <= n/2; i++) {
+            //determine if it is divisible by something
+            //if it is break out because it is not a prime number
             if(n % i == 0) {
                 isPrime = false;
                 break;
@@ -129,6 +147,7 @@ void program5() {
         }
     }
 
+    //print out whether it is prime or not
     if(isPrime) {
         cout << n << " is a prime number" << endl;
     } else {
@@ -137,38 +156,51 @@ void program5() {
 }
 
 void program6() {
+    //declare the variables
     vector<int> nums = {22, 21, 22, 24, 26, 74, 82, 91, 98, 65};
-
     int sum;
-    double answer;
+    int answer;
 
+    //iterate through the array
     for(int i =0; i < nums.size(); i++) {
+        // add up all of the numbers
         sum += nums[i];
     }
 
+    //find the average
     answer = sum / nums.size();
+    //output the average
     cout << "The average is: " << answer << endl;
 
 }
 
 void program7() {
+    //declare the variable
     int n;
 
+    //ask the user for input
     cout << "Enter a positive Number: ";
     cin >> n;
 
+    //declare our array
     string* myArray;
     myArray = new string[n];
 
+    //find our file
     ifstream file("program7.txt");
     if(file.is_open())
     {
+        //create variables to find longest word
         int longest = 0;
         int longestPosition;
+
+        //iterate through the array
         for(int i = 0; i < n; ++i)
         {
+            //put our words from the file into the array
             file >> myArray[i];
 
+            //find the longest word
             if(longest < myArray[i].length()) {
                 longest = myArray[i].length();
                 longestPosition = i;
@@ -176,7 +208,11 @@ void program7() {
             }
         }
 
+        //output the longest word
         cout << myArray[longestPosition] << endl;
     }
+
+    //close the file
+    file.close();
 }
 
